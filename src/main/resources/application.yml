@@ -2,20 +2,14 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/invoicemanagerdb
     username: srijakchakraborty
-    password: postgres
+    password: Iamsrijak@1
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: update                   # Use 'update' during development; 'validate' or 'none' in production
-    show-sql: true                       # Shows SQL statements in the console for debugging
+      ddl-auto: update
+    show-sql: true
     properties:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
-        format_sql: true
-  sql:
-    init:
-      mode: always                       # Run SQL scripts on startup if needed
-logging:
-  level:
-    org:
-      hibernate: DEBUG                   # Optional: Enables more detailed Hibernate logs
+server:
+  port: 8080 
